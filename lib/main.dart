@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'converter_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +11,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: "Currency Converter",
-      // theme: ThemeData.dark(),
-      home: ConverterPage(),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: "Flutter App",
+      theme: ThemeData.dark(),
+      home: const HomePage(),
     );
   }
 }

@@ -74,8 +74,8 @@ class _ConverterPageState extends State<ConverterPage> {
           height: 500,
           child: Card(
             elevation: 5,
-            shadowColor: const Color.fromARGB(255, 104, 95, 95),
-            color: const Color.fromARGB(255, 255, 255, 255),
+            // shadowColor: const Color.fromARGB(255, 104, 95, 95),
+            // color: const Color.fromARGB(255, 255, 255, 255),
             child: Padding(
               padding: const EdgeInsets.all(30.0),
               child: Column(
