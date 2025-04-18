@@ -1,3 +1,4 @@
+import 'package:cse_3212_flutter/converter_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -121,8 +122,9 @@ class HomePage extends StatelessWidget {
                 height: 200,
                 width: 250,
                 decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    border: Border.all(color: Colors.white, width: 6)),
+                  color: Colors.blueGrey,
+                  border: Border.all(color: Colors.white, width: 6),
+                ),
                 margin: EdgeInsets.all(20),
                 padding: EdgeInsets.all(10),
                 child: Image.asset("assets/images/flutter.png"),
@@ -130,10 +132,18 @@ class HomePage extends StatelessWidget {
                 //     "https://res.cloudinary.com/dvsuhuocv/image/upload/v1736971585/eecjvezsu5bmgxdq1s1m.png"),
               ),
               ElevatedButton(
-                  onPressed: () {
-                    myAlertDialog(context);
-                  },
-                  child: Text("Alert Button")),
+                onPressed: () {
+                  myAlertDialog(context);
+                },
+                child: Text("Alert Button"),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => ConverterPage()));
+                },
+                child: Text("Form"),
+              ),
             ],
           ),
         ));
