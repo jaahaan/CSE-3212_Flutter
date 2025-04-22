@@ -1,3 +1,4 @@
+import 'package:cse_3212_flutter/widgets/nav_drawer.dart';
 import 'package:flutter/material.dart';
 
 // 1. Create a variable that stores the converted currency value
@@ -58,22 +59,17 @@ class _ConverterPageState extends State<ConverterPage> {
       appBar: AppBar(
         title: Text(
           "Currency Converter",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            fontWeight: FontWeight.bold,
-          ),
         ),
         elevation: 5,
         centerTitle: true,
-        backgroundColor: Colors.brown,
+        backgroundColor: Colors.blueGrey,
       ),
       body: Center(
         child: SizedBox(
           width: 400,
           height: 500,
           child: Card(
-            elevation: 5,
+            elevation: 10,
             // shadowColor: const Color.fromARGB(255, 104, 95, 95),
             // color: const Color.fromARGB(255, 255, 255, 255),
             child: Padding(
@@ -97,13 +93,11 @@ class _ConverterPageState extends State<ConverterPage> {
                   ),
                   TextField(
                     controller: textEditingController,
-                    style: TextStyle(color: Colors.black),
                     decoration: InputDecoration(
                       errorText: errorText,
                       errorBorder: border,
                       focusedErrorBorder: border,
                       label: Text("Amount"),
-                      labelStyle: TextStyle(color: Colors.black),
                       hintText: "Enter amount",
                       prefixIcon: Icon(Icons.monetization_on),
                       prefixIconColor: Colors.brown,

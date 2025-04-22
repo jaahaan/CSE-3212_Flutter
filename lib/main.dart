@@ -1,4 +1,4 @@
-import 'package:cse_3212_flutter/home_page.dart';
+import 'package:cse_3212_flutter/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Flutter App",
       theme: ThemeData.dark(),
-      home: HomePage(),
+      home: LandingPage(),
     );
   }
 }
