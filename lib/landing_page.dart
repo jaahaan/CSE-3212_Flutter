@@ -1,9 +1,8 @@
 import 'package:cse_3212_flutter/converter_page.dart';
 import 'package:cse_3212_flutter/gridview_page.dart';
+import 'package:cse_3212_flutter/home_page.dart';
 import 'package:cse_3212_flutter/listview_page.dart';
 import 'package:flutter/material.dart';
-
-import 'home_page.dart';
 
 class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
@@ -27,7 +26,7 @@ class _LandingPageState extends State<LandingPage> {
               ElevatedButton(
                 style: buttonStyle,
                 onPressed: () {
-                  Navigator.of(context).push(
+                  Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HomePage()));
                 },
                 child: Text("HomePage"),

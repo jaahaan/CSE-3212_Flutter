@@ -61,6 +61,7 @@ class GridviewPage extends StatelessWidget {
                 child: SizedBox(
                   child: Card(
                     child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.network(
                           myItems[index]['img']!,
@@ -70,7 +71,9 @@ class GridviewPage extends StatelessWidget {
                         SizedBox(
                           height: 20,
                         ),
-                        Text(myItems[index]['title']!),
+                        Text(myItems[index]['title']!,
+                            style: TextStyle(
+                                fontSize: 20, fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),

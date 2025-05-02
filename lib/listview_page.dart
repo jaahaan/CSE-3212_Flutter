@@ -1,3 +1,4 @@
+import 'package:cse_3212_flutter/listitem_page.dart';
 import 'package:flutter/material.dart';
 
 class ListviewPage extends StatelessWidget {
@@ -56,21 +57,30 @@ class ListviewPage extends StatelessWidget {
             itemCount: myItems.length,
             itemBuilder: (context, index) {
               return GestureDetector(
-                child: SizedBox(
-                  child: Card(
-                    child: Row(
-                      children: [
-                        Image.network(
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => ListitemPage(
+                            myItems[index]['img']!, myItems[index]['title']!))),
+                child: Card(
+                  color: Colors.blueGrey,
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Image.network(
                           myItems[index]['img']!,
                           width: 100,
                           height: 100,
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Text(myItems[index]['title']!),
-                      ],
-                    ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Text(myItems[index]['title']!,
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold)),
+                    ],
                   ),
                 ),
               );

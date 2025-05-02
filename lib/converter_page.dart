@@ -1,4 +1,3 @@
-import 'package:cse_3212_flutter/widgets/nav_drawer.dart';
 import 'package:flutter/material.dart';
 
 // 1. Create a variable that stores the converted currency value
@@ -42,7 +41,7 @@ class _ConverterPageState extends State<ConverterPage> {
   Widget build(Object context) {
     final border = OutlineInputBorder(
       borderSide: BorderSide(
-        color: Colors.brown,
+        color: Colors.blueGrey,
         width: 2,
         style: BorderStyle.solid,
       ),
@@ -50,7 +49,7 @@ class _ConverterPageState extends State<ConverterPage> {
     );
 
     final textStyle = TextStyle(
-      color: Colors.brown,
+      color: Colors.blueGrey,
       fontSize: 23,
       fontWeight: FontWeight.bold,
     );
@@ -83,7 +82,7 @@ class _ConverterPageState extends State<ConverterPage> {
                       Text('USD ', style: textStyle),
                       Icon(
                         Icons.arrow_forward,
-                        color: Colors.brown,
+                        color: Colors.blueGrey,
                       ),
                       Text(' BDT', style: textStyle),
                     ],
@@ -100,7 +99,7 @@ class _ConverterPageState extends State<ConverterPage> {
                       label: Text("Amount"),
                       hintText: "Enter amount",
                       prefixIcon: Icon(Icons.monetization_on),
-                      prefixIconColor: Colors.brown,
+                      prefixIconColor: Colors.blueGrey,
                       focusedBorder: border,
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.all(
@@ -118,7 +117,7 @@ class _ConverterPageState extends State<ConverterPage> {
                   TextButton(
                     onPressed: () => convert(),
                     style: TextButton.styleFrom(
-                        backgroundColor: Colors.brown,
+                        backgroundColor: Colors.blueGrey,
                         foregroundColor:
                             const Color.fromARGB(255, 255, 255, 255),
                         minimumSize: Size(double.infinity, 50)),
@@ -130,7 +129,7 @@ class _ConverterPageState extends State<ConverterPage> {
                   Text(
                     'BDT ${result.toStringAsFixed(2)}',
                     style: TextStyle(
-                      color: Colors.brown,
+                      color: Colors.blueGrey,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),

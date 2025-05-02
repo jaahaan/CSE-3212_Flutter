@@ -96,8 +96,9 @@ class _HomePageState extends State<HomePage> {
         currentIndex: _selectedItem,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: "Contact"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+          BottomNavigationBarItem(
+              icon: Icon(Icons.swap_horiz), label: "Converter"),
+          BottomNavigationBarItem(icon: Icon(Icons.list), label: "Listview")
         ],
         onTap: (int index) {
           setState(() {
